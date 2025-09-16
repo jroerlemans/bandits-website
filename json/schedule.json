@@ -1,0 +1,38 @@
+[
+    {
+      "team": "The Bandits",
+      "opponent": "Mind Blue Esports",
+      "format": "Bo5",
+      "date": "2025-10-04T18:00:00Z",
+      "tournament": "bas.png",
+      "stage": "Grand Finals",
+      "opponent-image": "Mind_Blue.png"
+    },
+    {
+      "team": "The Bandits",
+      "opponent": "Team B",
+      "format": "Bo1",
+      "date": "2025-10-11T15:00:00Z",
+      "tournament": "rol.png",
+      "stage": "Week 1 Day 2",
+      "opponent-image": "Mind_Blue.png"
+    },
+    {
+      "team": "The Bandits",
+      "opponent": "Team B",
+      "format": "Bo1",
+      "date": "2025-10-11T15:00:00Z",
+      "tournament": "rol.png",
+      "stage": "Week 1 Day 2",
+      "opponent-image": "Mind_Blue.png"
+    },
+    {
+      "team": "The Bandits",
+      "opponent": "Team B",
+      "format": "Bo5",
+      "date": "2025-09-15T19:00:00Z",
+      "tournament": "bas.png",
+      "stage": "Upper Bracket Finals",
+      "opponent-image": "Mind_Blue.png"
+    }
+  ]

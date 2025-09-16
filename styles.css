@@ -1,0 +1,202 @@
+:root {
+    --container-max-width: 78rem;
+	--color-main-red: #e72c33;
+	--color-darker-red: #781720;
+	--color-light-gray: #484848;
+	--color-dark-gray: #25262d;
+  }
+
+/* Base layout */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* Simple header/footer spacing */
+footer {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+/* Schedule section styling */
+
+.schedule-box {
+    background-color: transparent;
+    margin: 0 auto;
+    max-width: 100%;
+    min-height: 250px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* Remove white-space: nowrap; */
+    /* Remove scrollbar-width and scrollbar-color if you want, or keep */
+    position: relative;
+    display: flex;           /* NEW: use flexbox for horizontal layout */
+    gap: 20px;               /* NEW: space between cards */
+    align-items: stretch;    /* Optional: make all cards same height */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-main-red) transparent;
+}
+
+.schedule-container {
+    position: relative;
+}
+
+.schedule-box::-webkit-scrollbar {
+    height: 8px;
+}
+
+.schedule-box::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.schedule-box::-webkit-scrollbar-thumb {
+    background-color: var(--color-main-red);
+    border-radius: 4px;
+}
+
+.schedule-item {
+    width: 400px;
+    height: 200px;
+    background-color: var(--color-light-gray);
+    border-radius: 8px;
+    vertical-align: top;
+    white-space: normal;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    position: relative;
+}
+.schedule-item:hover {
+	background-color: var(--color-main-red);
+}
+
+.schedule-item:last-child {
+    margin-right: 0;
+}
+
+/* Navigation buttons */
+.schedule-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 20;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.schedule-nav:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.schedule-nav:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.schedule-nav:disabled:hover {
+    transform: translateY(-50%) scale(1);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.schedule-nav-left {
+    left: 20px;
+}
+
+.schedule-nav-right {
+    right: 20px;
+}
+
+
+
+.section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.container {
+    z-index: 1;
+    max-width: var(--container-max-width);
+    width: calc(100vw - 136px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: block;
+    position: relative;
+    transform: translate(0);
+}
+
+.image-slide-box {
+    /* background-color: var(--color-darker-red); */
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 800px;
+    min-height: 500px;
+}
+
+.sched-date {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-main-red)
+}
+
+.sched-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.team-logo {
+    height: 80px;
+    width: auto;
+}
+
+.sched-format {
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.sched-footer {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Spread logo left, stage right */
+    align-items: center;
+    gap: 8px;
+}
+
+.sched-tournament {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+
+.sched-stage {
+    font-size: 14px;
+    opacity: 0.9;
+    text-align: right;
+}
